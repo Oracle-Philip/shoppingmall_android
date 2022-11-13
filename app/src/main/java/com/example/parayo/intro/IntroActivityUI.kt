@@ -19,5 +19,4 @@ class IntroActivityUI : AnkoComponent<IntroActivity> {
             }
         }
     }
-
 }

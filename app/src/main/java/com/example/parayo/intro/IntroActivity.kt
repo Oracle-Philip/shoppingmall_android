@@ -14,9 +14,8 @@ class IntroActivity : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        IntroActivityUI().setContentView(this)
     }
-
 }
 
 
