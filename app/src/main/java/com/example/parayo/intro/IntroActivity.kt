@@ -4,6 +4,7 @@ import android.app.Activity
 import android.os.Bundle
 import android.util.Log
 import com.example.parayo.api.ParayoApi
+import com.example.parayo.signup.SignupActivity
 import kotlinx.coroutines.*
 
 import org.jetbrains.anko.setContentView
@@ -15,17 +16,21 @@ class IntroActivity : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val ui = IntroActivityUI()
-        ui.setContentView(this)
+        IntroActivityUI().setContentView(this)
 
-        runBlocking {
-            try {
-                val response = ParayoApi.instance.hello()
-                Log.e(TAG, response.data)
-            } catch (e: java.lang.Exception){
-                Log.e(TAG, "Hello API 호출 오류", e)
-            }
+        GlobalScope.launch {
+            delay(1000)
+            startActivity<SignupActivity>()
+            finish()
         }
+//        runBlocking {
+//            try {
+//                val response = ParayoApi.instance.hello()
+//                Log.e(TAG, response.data)
+//            } catch (e: java.lang.Exception){
+//                Log.e(TAG, "Hello API 호출 오류", e)
+//            }
+//        }
     }
 }
 
