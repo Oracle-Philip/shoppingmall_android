@@ -20,7 +20,7 @@ class SigninActivityUI(
 ) : AnkoComponent<SigninActivity> {
 
     override fun createView(ui: AnkoContext<SigninActivity>) =
-        ui.linearLayout {
+        ui.n {
             orientation = LinearLayout.VERTICAL
             gravity = Gravity.CENTER_VERTICAL
             padding = dip(20)

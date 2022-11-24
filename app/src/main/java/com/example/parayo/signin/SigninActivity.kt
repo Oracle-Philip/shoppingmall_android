@@ -10,8 +10,6 @@ class SigninActivity : BaseActivity<SigninViewModel>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        SigninActivityUI(getViewModel())
-            .setContentView(this)
+        SigninActivityUI(getViewModel()).setContentView(this)
     }
 }
