@@ -31,6 +31,7 @@ class ApiGenerator {
 
     companion object {
         //const val HOST = "http://10.0.2.2:8080"
-        const val HOST = "http://172.30.1.4:8080"
+        //const val HOST = "http://192.168.0.68:8080"
+        const val HOST = "https://weardoctor.uzzaggo.com/restAPI/test.do"
     }
 }
