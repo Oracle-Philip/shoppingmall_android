@@ -9,7 +9,7 @@ import kotlinx.coroutines.withContext
 import net.codephobia.ankomvvm.lifecycle.BaseViewModel
 import org.jetbrains.anko.error
 
-class SignupViewModel(app: Application) : BaseViewModel(app) {
+class SignupViewModel(app : Application) : BaseViewModel(app) {
 
     val email = MutableLiveData("")
     val name = MutableLiveData("")

@@ -20,17 +20,17 @@ class SigninActivityUI(
 ) : AnkoComponent<SigninActivity> {
 
     override fun createView(ui: AnkoContext<SigninActivity>) =
-        ui.n {
+        ui.linearLayout {
             orientation = LinearLayout.VERTICAL
             gravity = Gravity.CENTER_VERTICAL
             padding = dip(20)
 
-            textView("Parayo"){
+            textView("Parayo") {
                 textAlignment = TextView.TEXT_ALIGNMENT_CENTER
                 textSize = 24f
                 typeface = Typeface.DEFAULT_BOLD
                 textColorResource = R.color.colorPrimary
-            }.lparams(width = matchParent){
+            }.lparams(width = matchParent) {
                 bottomMargin = dip(50)
             }
 
@@ -42,7 +42,7 @@ class SigninActivityUI(
                 }.lparams(width = matchParent){
                     bottomMargin = dip(20)
                 }
-            }
+
 
             textInputLayout {
                 textInputEditText {
@@ -66,4 +66,5 @@ class SigninActivityUI(
                 onClick { ui.startActivity<SignupActivity>() }
             }
         }
+    }
 }

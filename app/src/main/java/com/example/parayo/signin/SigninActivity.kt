@@ -7,7 +7,6 @@ import kotlin.reflect.KClass
 
 class SigninActivity : BaseActivity<SigninViewModel>() {
     override val viewModelType = SigninViewModel::class
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         SigninActivityUI(getViewModel()).setContentView(this)
