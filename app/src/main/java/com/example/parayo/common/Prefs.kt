@@ -27,6 +27,12 @@ object Prefs {
             .putString(USER_NAME, value)
             .apply()
 
+    var userName
+        get() = prefs.getString(USER_ID, null)
+        set(value) = prefs.edit()
+            .putString(USER_ID, value)
+            .apply()
+
     var userId
         get() = prefs.getLong(USER_ID, 0)
         set(value) = prefs.edit()
