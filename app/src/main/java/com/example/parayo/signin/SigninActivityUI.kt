@@ -25,6 +25,7 @@ class SigninActivityUI(
             gravity = Gravity.CENTER_VERTICAL
             padding = dip(20)
 
+
             textView("Parayo") {
                 textAlignment = TextView.TEXT_ALIGNMENT_CENTER
                 textSize = 24f
@@ -34,14 +35,16 @@ class SigninActivityUI(
                 bottomMargin = dip(50)
             }
 
+
             textInputLayout {
                 textInputEditText {
                     hint = "Email"
                     setSingleLine()
                     bindString(ui.owner, viewModel.email)
-                }.lparams(width = matchParent){
-                    bottomMargin = dip(20)
                 }
+            }.lparams(width = matchParent) {
+                bottomMargin = dip(20)
+            }
 
 
             textInputLayout {
@@ -52,19 +55,21 @@ class SigninActivityUI(
                             InputType.TYPE_TEXT_VARIATION_PASSWORD
                     bindString(ui.owner, viewModel.password)
                 }
-            }.lparams(width = matchParent){
+            }.lparams(width = matchParent) {
                 bottomMargin = dip(20)
             }
 
-            button("로그인"){
+
+            button("로그인") {
                 onClick { viewModel.signin() }
             }.lparams(width = matchParent)
 
-            button("회원가입"){
+
+            button("회원가입") {
                 backgroundColor = Color.TRANSPARENT
                 textColorResource = R.color.colorPrimary
                 onClick { ui.startActivity<SignupActivity>() }
             }
         }
-    }
+
 }
